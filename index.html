@@ -3,9 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Calculator</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  
+  <div class="calculator">
+    <div class="display">
+      <div id="display-value"></div>
+    </div>
+    <div class="buttons">
+      <div>
+        <button onclick="updateDisplay('7')">7</button>
+        <button onclick="updateDisplay('8')">8</button>
+        <button onclick="updateDisplay('9')">9</button>
+        <button class="operator" onclick="handleOperator('+')">+</button>
+      </div>
+      <div>
+        <button onclick="updateDisplay('4')">4</button>
+        <button onclick="updateDisplay('5')">5</button>
+        <button onclick="updateDisplay('6')">6</button>
+        <button class="operator" onclick="handleOperator('-')">-</button>
+      </div>
+      <div>
+        <button onclick="updateDisplay('1')">1</button>
+        <button onclick="updateDisplay('2')">2</button>
+        <button onclick="updateDisplay('3')">3</button>
+        <button class="operator" onclick="handleOperator('*')">x</button>
+      </div>
+      <div>
+        <button class="clear" onclick="clearDisplay()">Clear</button>
+        <button>0</button>
+        <button onclick="deleteLastDigit()">Del</button>
+        <button class="operator" onclick="handleOperator('/')">/</button>
+      </div>
+      <div>
+        <button style="width: 265px;" class="operator" onclick="handleOperator('=')">=</button>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
 </body>
 </html>
